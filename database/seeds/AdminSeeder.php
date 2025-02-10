@@ -8,7 +8,7 @@ $dotenv->load();
 $db = \App\Core\Database::getInstance();
 
 try {
-    // Check if admin user already exists
+    // check if admin user already exists
     $stmt = $db->prepare("SELECT * FROM users WHERE email = 'admin@example.com'");
     $stmt->execute();
     

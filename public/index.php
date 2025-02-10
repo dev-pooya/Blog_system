@@ -4,15 +4,15 @@ session_start();
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-// Load environment variables
+// load environment variables
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
-// Initialize the application
+// initialize the application
 $app = new App\Core\App();
 
-// Register routes
+// register routes
 require_once __DIR__ . '/../routes/web.php';
 
-// Run the application
+// run the application
 $app->run(); 

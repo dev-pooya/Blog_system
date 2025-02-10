@@ -12,7 +12,7 @@ class App
         self::$container = new DependencyContainer();
         $this->router = new Router();
         
-        // Register core services
+        // register core services
         self::$container->register('db', function() {
             return Database::getInstance();
         });

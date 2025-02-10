@@ -6,19 +6,19 @@ abstract class Controller
 {
     protected function view(string $name, array $data = []): void
     {
-        // Start output buffering
+        // start output buffering
         ob_start();
         
-        // Extract data for the view
+        // extract data for the view
         extract($data);
         
-        // Include the view file
+        // iinclude the view file
         require_once __DIR__ . "/../Views/{$name}.php";
         
-        // Get the content
+        // get the content
         $content = ob_get_clean();
         
-        // Include the layout
+        // include the layout
         require_once __DIR__ . "/../Views/layouts/main.php";
     }
 

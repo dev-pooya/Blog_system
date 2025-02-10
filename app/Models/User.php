@@ -37,7 +37,7 @@ class User extends Model
             SET is_admin = CASE WHEN is_admin = 1 THEN 0 ELSE 1 END
             WHERE id = ? AND id != ?
         ");
-        // Prevent toggling the main admin account
+        // prevent toggling the main admin account
         return $stmt->execute([$id, Auth::id()]);
     }
 

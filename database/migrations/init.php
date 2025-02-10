@@ -2,10 +2,10 @@
 
 use App\Core\Database;
 
-// The environment variables are now loaded from cli/migrate.php
+// the environment variables are now loaded from cli/migrate.php
 $db = Database::getInstance();
 
-// Create users table
+// create users table
 $db->exec("
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +17,7 @@ $db->exec("
     )
 ");
 
-// Create posts table
+// create posts table
 $db->exec("
     CREATE TABLE IF NOT EXISTS posts (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
